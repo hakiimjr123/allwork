@@ -1,0 +1,12 @@
+package com.qa.JenkinsAsees;
+
+public class JenkinsConstants {
+
+	
+	
+	public static final String Jurl1 = "http://localhost:8080/login?from=%2F";
+	public static final String Jurl = "http://localhost:8080/securityRealm/addUser";
+	public static final String reportURL = "C:\\\\Users\\\\Admin\\\\Desktop\\\\JenkinsReport.html";
+	
+	public static  int CuCumCount = 0;
+}

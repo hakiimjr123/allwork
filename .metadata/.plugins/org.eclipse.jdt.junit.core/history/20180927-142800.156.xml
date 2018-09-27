@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PetTyrest" project="VET" tests="3" started="3" failures="0" errors="0" ignored="1">
+  <testsuite name="com.qa.vet2.PetTyrest" time="3.172">
+    <testcase name="deletePetyid" classname="com.qa.vet2.PetTyrest" time="2.936"/>
+    <testcase name="PostPetTy" classname="com.qa.vet2.PetTyrest" time="0.0" ignored="true"/>
+    <testcase name="GetpetTypes" classname="com.qa.vet2.PetTyrest" time="0.236"/>
+  </testsuite>
+</testrun>

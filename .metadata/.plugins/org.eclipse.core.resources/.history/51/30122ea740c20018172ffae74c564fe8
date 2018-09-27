@@ -1,0 +1,17 @@
+package com.qa.vet2;
+
+import org.json.simple.JSONObject;
+
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class Userrest {
+	private Response response;
+	private RequestSpecification request;
+	private ValidatableResponse json;
+	
+	JSONObject requestparam = new JSONObject();
+	
+
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Ownerrest" project="VET" tests="6" started="6" failures="0" errors="0" ignored="1">
+  <testsuite name="com.qa.vet2.Ownerrest" time="4.372">
+    <testcase name="Postowner" classname="com.qa.vet2.Ownerrest" time="0.005" ignored="true"/>
+    <testcase name="GetownerId" classname="com.qa.vet2.Ownerrest" time="3.658"/>
+    <testcase name="getlastname" classname="com.qa.vet2.Ownerrest" time="0.167"/>
+    <testcase name="DeleteId" classname="com.qa.vet2.Ownerrest" time="0.17"/>
+    <testcase name="GetAllowner" classname="com.qa.vet2.Ownerrest" time="0.116"/>
+    <testcase name="PutOwner" classname="com.qa.vet2.Ownerrest" time="0.256"/>
+  </testsuite>
+</testrun>

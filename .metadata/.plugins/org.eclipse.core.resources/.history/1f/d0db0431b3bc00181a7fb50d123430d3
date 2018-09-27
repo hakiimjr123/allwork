@@ -1,0 +1,64 @@
+package com.qa.DemoDDT;
+
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
+
+public class DemoDDTtest {
+	WebDriver driver = null;
+	public static ExtentReports report;
+	public ExtentTest test;
+	
+	@BeforeClass
+	public static void initial() {
+		report = DemoDdtTestSuite.report;
+	}
+	@Before
+	public void setup() {
+		DemoDDtDataManage.DataManage(ConstantsDemo.Path_DemoData + ConstantsDemo.File_DemoData,0);
+		System.setProperty(ConstantsDemo.driverType, ConstantsDemo.cDFilePath);
+		driver = new ChromeDriver();
+		
+		
+		
+	}
+	
+	@Test
+	public void Demosee1( throws InterruptedException) {
+		for(int i=1; i<DemoDDtDataManage.getDemoDataSheet().getPhysicalNumberOfRows(); i++) {
+			
+			test = report.startTest("Data User Test" +i);
+			driver.get(ConstantsDemo.url);
+			test.log(LogStatus.INFO, "Demo Site Has Been Opened");
+			
+			
+			DemoddtUser firstPage = PageFactory.initElements(driver, DemoddtUser.class);
+			DemoddtLogin secondPage = PageFactory.initElements(driver, DemoddtLogin.class);
+			
+WebElement checkElement = driver.findElement(By.xpath("/html/body/div/center/table/tbody/tr[2]/td/div/center/table/tbody/tr/td[2]/p/small/a[3]"));
+		checkElement.click();
+		
+		test.log(LogStatus.INFO,"Navigate to add users");
+		
+			
+			
+			
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+}

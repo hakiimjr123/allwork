@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Person" project="People" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="com.qa.People.Person" time="105.195">
+    <testcase name="GetPerson" classname="com.qa.People.Person" time="102.446"/>
+    <testcase name="PutSwagger" classname="com.qa.People.Person" time="2.535"/>
+    <testcase name="Getsize" classname="com.qa.People.Person" time="0.214"/>
+  </testsuite>
+</testrun>

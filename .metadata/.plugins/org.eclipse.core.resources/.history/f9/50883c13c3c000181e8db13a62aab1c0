@@ -1,0 +1,43 @@
+package com.qa.People;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.junit.Test;
+
+
+
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class Person {
+	private Response response;
+	private RequestSpecification request;
+	private ValidatableResponse json;
+	
+	JSONObject requestparam = new JSONObject();
+	JSONObject address = new JSONObject();
+	JSONArray address1 = new JSONArray();
+	
+	@Test
+	public void PutSwagger() {
+		RestAssured.baseURI = Personconstants.SHURI;
+		request = RestAssured.given();
+		request.header("Content-Type", "application/json");
+	
+		address.put("city", "London");
+		address.put("id", 0);
+		address.put("line1", "55 Chruchill Walk");
+		address.put("line2", "Hackney");
+		address.put("state", "Carolina");
+		address.put("zip", "e9 5sr");
+		
+		
+		address1.put
+		
+		
+	}
+	
+
+}

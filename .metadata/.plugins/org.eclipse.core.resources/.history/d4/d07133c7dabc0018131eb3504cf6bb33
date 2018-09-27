@@ -1,0 +1,12 @@
+package com.qa.CucumberTests;
+
+public class CucumConstants {
+	
+	
+	public static final String url =  "http://www.practiceselenium.com/welcome.html";
+	
+	public static final String reportURL = "C:\\\\Users\\\\Admin\\\\Desktop\\\\DDTREPORT.html";
+	
+	
+
+}

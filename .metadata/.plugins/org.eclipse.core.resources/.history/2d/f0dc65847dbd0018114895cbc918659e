@@ -1,0 +1,12 @@
+package com.qa.JenkinsAsees;
+
+import cucumber.api.java.Before;
+
+WebDriver driver;
+public class JenkinsTest {
+
+	@Before
+	public void setup() {
+		System.setProperty("webdriver.chrome.driver", "C:\\\\\\\\Testing\\\\\\\\chromedriver.exe");
+		driver = new ChromeDriver();
+}

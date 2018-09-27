@@ -1,0 +1,7 @@
+package com.qa.Swagger;
+
+public class SwaggerConstant {
+	
+	String SHURI = "http://localhost:8090/example/v1/hotels"
+
+}

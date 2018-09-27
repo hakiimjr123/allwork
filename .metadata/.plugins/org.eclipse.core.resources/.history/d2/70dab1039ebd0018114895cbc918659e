@@ -1,0 +1,23 @@
+package com.qa.JenkinsAsees;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+
+
+public class ClickUsers {
+	@FindBy(id = ("people"))
+	private WebElement users;
+	
+	
+	
+	
+	
+	public void (WebDriver driver) {
+	Actions acting = new Actions (driver);
+	acting.moveToElement(users).click().perform();
+
+}
+}

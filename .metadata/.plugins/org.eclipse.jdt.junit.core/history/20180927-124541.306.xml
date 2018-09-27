@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Ownerrest" project="VET" tests="2" started="2" failures="0" errors="0" ignored="0">
+  <testsuite name="com.qa.vet2.Ownerrest" time="3.921">
+    <testcase name="Postowner" classname="com.qa.vet2.Ownerrest" time="3.689"/>
+    <testcase name="Getowner" classname="com.qa.vet2.Ownerrest" time="0.232"/>
+  </testsuite>
+</testrun>

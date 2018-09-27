@@ -1,0 +1,16 @@
+package com.qa.JenkinsAsees;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+
+public class Usersubmit {
+
+	
+	
+	@FindBy(xpath = ("//*[@id=\"yui-gen3-button\"]"))
+	private WebElement Submitbutton;
+	
+	public void submitMe() {
+ Submitbutton.click(); 
+	}
+}

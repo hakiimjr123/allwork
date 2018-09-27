@@ -1,0 +1,5 @@
+package com.qa.VET;
+
+public class VetConstants {
+	public static final String reportURL = "C:\\\\Users\\\\Admin\\\\Desktop\\\\PersonTest.html";
+}

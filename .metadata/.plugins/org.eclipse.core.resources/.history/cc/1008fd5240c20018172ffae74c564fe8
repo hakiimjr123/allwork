@@ -1,0 +1,20 @@
+package com.qa.VET;
+
+import org.json.JSONObject;
+
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class VetNonfunc1 {
+	
+	
+	
+	private Response response;
+	private RequestSpecification request;
+	private ValidatableResponse json;
+	
+	JSONObject requestparam = new JSONObject();
+
+
+}

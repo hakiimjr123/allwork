@@ -1,0 +1,29 @@
+package com.qa.vet2;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class VisitRest {
+	
+	private Response response;
+	private RequestSpecification request;
+	
+	
+	JSONObject requestparam = new JSONObject();
+	
+	JSONObject pet = new JSONObject();
+	JSONArray pet1 = new JSONArray();
+	
+	JSONObject visit = new JSONObject();
+	JSONArray visit1 = new JSONArray();
+	
+	JSONObject typo = new JSONObject();
+	JSONArray typo1 = new JSONArray();
+	
+	
+	
+
+}

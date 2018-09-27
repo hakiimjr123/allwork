@@ -1,0 +1,22 @@
+package com.qa.OmdbTests;
+
+import org.junit.Test;
+
+import static io.restassured.RestAssured.*;
+import io.restassured.http.ContentType;
+
+public class OmdbTest {
+	
+	@Test
+	public void RestassureStatus() {
+		
+		given().
+		content(ContentType.JSON)
+		.when()
+		.get("http://www.omdbapi.com/?apikey=7e871fdf&t=IT&y=2017")
+		.then().statusCode(200)
+;
+		
+	}
+
+}

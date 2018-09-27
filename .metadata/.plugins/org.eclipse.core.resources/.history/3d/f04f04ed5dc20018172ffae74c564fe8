@@ -1,0 +1,92 @@
+package com.qa.vet2;
+
+import static io.restassured.RestAssured.given;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.junit.Test;
+
+import com.qa.VET.VetConstants;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class VisitRest {
+	
+	private Response response;
+	private RequestSpecification request;
+	
+	
+	JSONObject requestparam = new JSONObject();
+	
+	JSONObject petto = new JSONObject();
+	JSONArray pet1 = new JSONArray();
+	
+	JSONObject visit = new JSONObject();
+	JSONArray visit1 = new JSONArray();
+	
+	JSONObject typo = new JSONObject();
+	JSONArray typo1 = new JSONArray();
+	
+	JSONObject owned = new JSONObject();
+	JSONArray ownee = new JSONArray();
+	
+	
+	@Test
+	public void GetVisit() {
+		request = 	given().content(ContentType.JSON);
+		response = request.when().get(VetConstants.Visiturl);
+		System.out.println(response.getStatusCode());
+		System.out.println(response.asString());
+	}
+
+	@Test
+	public void postvist() {
+		RestAssured.baseURI = VetConstants.Visiturl;
+		request = RestAssured.given();
+		request.header("Content-Type", "application/json");
+		
+		typo.put("id", 0);
+		typo.put("name", "chimp");
+		
+		typo1.put(typo);
+		
+		owned.put("address", "105 N. Lake St.");
+		owned.put("city", "Jupiter");
+		owned.put("firstName", "Meh");
+		owned.put("id", 0);
+		owned.put("lastName", "Hem");
+		owned.put("pets", 0);
+		owned.put("telephone", "0800001066");
+		
+		ownee.put(owned);
+		
+		
+		
+		
+		petto.put("birthDate", "2018-09-27T10:56:03.043Z");
+		petto.put("id", 0);
+		petto.put("name", "Violet");
+		petto.put("owner", ownee);
+		petto.put("type", typo1);
+		petto.put("visits", 0);
+		
+		pet1.put(petto);
+		
+		requestparam.put("date", "2015/07/15");
+		requestparam.put("description", "meeeeh");
+		requestparam.put("id", 0);
+		requestparam.put("pet", pet1);
+		
+System.out.println(request.body(requestparam.toString()));
+		
+		response = request.when().post("/");
+		System.out.println(response.body().prettyPrint());
+		System.out.println(response.getStatusCode());
+		
+		
+	}
+	
+}

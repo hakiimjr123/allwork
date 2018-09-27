@@ -1,0 +1,70 @@
+package com.qa.People;
+
+import static io.restassured.RestAssured.given;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.junit.Ignore;
+import org.junit.Test;
+
+
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class Person {
+	private Response response;
+	private RequestSpecification request;
+	private ValidatableResponse json;
+	
+	JSONObject requestparam = new JSONObject();
+	JSONObject address = new JSONObject();
+	JSONArray address1 = new JSONArray();
+	
+	@Test
+	
+	public void PutSwagger() {
+		RestAssured.baseURI = Personconstants.SHURI;
+		request = RestAssured.given();
+		request.header("Content-Type", "application/json");
+		request.header("userId", "00000000");
+	
+		address.put("city", "London");
+		address.put("id", 0);
+		address.put("line1", "55 Chruchill Walk");
+		address.put("line2", "Hackney");
+		address.put("state", "Carolina");
+		address.put("zip", "e95sr");
+		
+		address1.put(address);
+		
+		requestparam.put("addresses", address1);
+		requestparam.put("dateOfBirth", "2018-09-25");
+		requestparam.put("firstName", "Hakiim");
+		requestparam.put("gender", "M");
+		requestparam.put("id", 0);
+		requestparam.put("lastName", "Junior");
+		requestparam.put("middleName", "KING");
+		
+		System.out.println(request.body(requestparam.toString()));
+		
+		response = request.when().put("/");
+		System.out.println(response.body().prettyPrint());
+		System.out.println(response.getStatusCode());
+		
+		
+	}
+	
+
+	@Test
+	public void GetPerson() {
+		request = 	given().content(ContentType.JSON);
+		response = request.when().get("http://localhost:8080/v1/person/1");
+		System.out.println(response.getStatusCode());
+		System.out.println(response.asString());
+	}
+		
+}

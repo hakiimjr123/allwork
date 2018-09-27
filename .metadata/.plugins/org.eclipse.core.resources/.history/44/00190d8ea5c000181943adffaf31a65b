@@ -1,0 +1,28 @@
+package com.qa.Swagger;
+
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
+
+import org.junit.Test;
+
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.response.ValidatableResponse;
+import io.restassured.specification.RequestSpecification;
+
+public class SwaggerHoteltest {
+	
+	private Response response;
+	private RequestSpecification request;
+	private ValidatableResponse json;
+	@Test
+	public void SWRestAssured() {
+		
+request = 	given().content(ContentType.JSON);
+		response = request.when().get("http://localhost:8090/example/v1/hotels");
+		System.out.println(response.getStatusCode());
+		System.out.println();
+		
+	}
+
+}

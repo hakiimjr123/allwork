@@ -1,0 +1,13 @@
+package com.qa.VET;
+
+import org.junit.runner.RunWith;
+
+import com.relevantcodes.extentreports.ExtentReports;
+
+import cucumber.api.junit.Cucumber;
+
+@RunWith(Cucumber.class)
+public class Vetrunner {
+	public static ExtentReports report = new ExtentReports(VetConstants.reportURL, true);
+
+}

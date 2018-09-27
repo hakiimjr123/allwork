@@ -1,0 +1,62 @@
+package com.qa.vet2;
+
+import static io.restassured.RestAssured.given;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+import org.junit.Test;
+
+import com.qa.VET.VetConstants;
+
+import io.restassured.RestAssured;
+import io.restassured.http.ContentType;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
+
+public class Ownerrest {
+	
+	private Response response;
+	private RequestSpecification request;
+	
+	
+	JSONObject requestparam = new JSONObject();
+	
+	JSONObject pet = new JSONObject();
+	JSONArray pet1 = new JSONArray();
+	
+	JSONObject visit = new JSONObject();
+	JSONArray visit1 = new JSONArray();
+	
+	JSONObject typo = new JSONObject();
+	JSONArray typo1 = new JSONArray();
+	
+	
+	
+	
+	@Test
+	public void Getowner() {
+		request = 	given().content(ContentType.JSON);
+		response = request.when().get(VetConstants.Ownerurl);
+		System.out.println(response.getStatusCode());
+		System.out.println(response.asString());
+		
+		
+		
+		
+	}
+	
+	
+	@Test
+	public void Postowner() {
+		RestAssured.baseURI = VetConstants.Ownerurl;
+		request = RestAssured.given();
+		request.header("Content-Type", "application/json");
+		
+		pet.put("birthDate", "2018-09-27T10:56:03.043Z");
+		pet.put("id", 0);
+		pet.put("name", "Violet");
+		pet.put("", "");
+		
+	}
+
+}

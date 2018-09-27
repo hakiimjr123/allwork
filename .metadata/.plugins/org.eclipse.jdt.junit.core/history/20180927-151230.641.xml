@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="NonfuncTestSuite" project="VET" tests="9" started="9" failures="0" errors="1" ignored="1">
+  <testsuite name="com.qa.vet2.NonfuncTestSuite" time="4.441">
+    <testsuite name="com.qa.vet2.Userrest" time="3.642">
+      <testcase name="PostUser" classname="com.qa.vet2.Userrest" time="3.642"/>
+    </testsuite>
+    <testsuite name="com.qa.vet2.Ownerrest" time="0.711">
+      <testcase name="Postowner" classname="com.qa.vet2.Ownerrest" time="0.001" ignored="true"/>
+      <testcase name="GetownerId" classname="com.qa.vet2.Ownerrest" time="0.207"/>
+      <testcase name="getlastname" classname="com.qa.vet2.Ownerrest" time="0.14"/>
+      <testcase name="DeleteId" classname="com.qa.vet2.Ownerrest" time="0.191"/>
+      <testcase name="GetAllowner" classname="com.qa.vet2.Ownerrest" time="0.093"/>
+      <testcase name="PutOwner" classname="com.qa.vet2.Ownerrest" time="0.079"/>
+    </testsuite>
+    <testsuite name="com.qa.vet2.VisitRest" time="0.06">
+      <testcase name="GetVisit" classname="com.qa.vet2.VisitRest" time="0.06"/>
+    </testsuite>
+    <testsuite name="com.qa.vet2.Specialists" time="0.028">
+      <testcase name="initializationError" classname="com.qa.vet2.Specialists" time="0.028">
+        <error>java.lang.Exception: No runnable methods&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.validateInstanceMethods(BlockJUnit4ClassRunner.java:191)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.collectInitializationErrors(BlockJUnit4ClassRunner.java:128)&#13;
+	at org.junit.runners.ParentRunner.validate(ParentRunner.java:416)&#13;
+	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:84)&#13;
+	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:65)&#13;
+	at org.junit.internal.builders.JUnit4Builder.runnerForClass(JUnit4Builder.java:10)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:101)&#13;
+	at org.junit.runners.model.RunnerBuilder.runners(RunnerBuilder.java:87)&#13;
+	at org.junit.runners.Suite.&lt;init&gt;(Suite.java:102)&#13;
+	at org.junit.runners.Suite.&lt;init&gt;(Suite.java:70)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)&#13;
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)&#13;
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)&#13;
+	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:107)&#13;
+	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:86)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)&#13;
+	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)&#13;
+	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:33)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createUnfilteredTest(JUnit4TestLoader.java:84)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.createTest(JUnit4TestLoader.java:70)&#13;
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestLoader.loadTests(JUnit4TestLoader.java:43)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:444)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)&#13;
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)&#13;
+&#13;
+</error>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testrun>
